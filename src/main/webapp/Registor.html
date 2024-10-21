@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registor</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="form1">
+    <form class="form" action="register" method="post">
+        <h1 class="btn-warning">Register</h1>
+        <br>
+        <br>
+        <label for="Name">Name : </label>
+        <input required placeholder="Enter your name" type="text" name="name" id="Name">
+        <br><br>
+        <label for="Mobile_No">Number : </label>
+        <input required placeholder="Enter mobile_No" type="number" name="number" id="number">
+        <br><br>
+        <label for="Email id">Email id </label>
+        <input required placeholder="Enter email id" type="text" name="email" id="Email">
+        <br>
+        <br>
+        <label for="Password">Password </label>
+        <input required placeholder="Create password" type="Password" name="password" id="Password">
+        <br><br>
+        <label for="Dob">DOB</label>
+        <input required type="date" name="dob" id="date">
+        <br><br>
+        <label for="Gender">Gender</label>
+        <br>
+       Male <input type="radio" id="male" name="Gender" value="Male">
+       Female <input type="radio" id="female" name="Gender" value="Female">
+       Other <input type="radio" id="other" name="Gender" value="Other">
+
+        <br>
+        <br>
+        <label for="State">State</label>
+        <select name="state" required>
+            <option disabled value="select st">-select state-</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Gujrat">Gujrat</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Other">Other</option>
+        </select>
+        <br><br>
+         <input value="Submit" type="submit" name="Submit" id="button">
+         <p>Already registered? <a class=" btn btn-primary" href="Login.html">Login here</a></p>
+       
+    </form> 
+</div>
+</body>
+</html>

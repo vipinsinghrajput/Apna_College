@@ -1,0 +1,39 @@
+*{
+    font-family: cursive;
+}
+form{
+    text-align: center;
+    color: white;
+    margin-bottom: -20px;
+}
+.btn{
+    margin-left: 50px;
+    text-decoration: none;
+}
+.btn{
+    padding: 3px 10px 5px 10px;
+    border-radius: 5%;
+    text-decoration: none;
+}
+.btn-primary{
+    background-color: #c1741c;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+.btn-warning{
+    background-color: #7dda1a;
+    color: black;
+    margin-top: 100px;
+    margin-bottom: -20px;
+}
+.sk{
+    padding: 200px;
+}
+body {
+    background-color:royalblue;
+}
+.form1{
+    padding: 20px;
+    margin-bottom: -20px;
+}

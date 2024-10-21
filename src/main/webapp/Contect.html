@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./contact.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Apna<span>Colle</span>ge
+            </div>
+            <div class="main">
+                <a class="bg1" href="home.html">Home</a>
+                <a class="bg1" href="About.html">About</a>
+                <a class="bg1" href="Gallery.html">Gallery</a>
+                <a  class="ch" href="Contect.html">Contact</a>
+            </div>
+            <div class="icon">
+                <!-- <a href="Registor.html">Registor</a> -->
+                <a href="Login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+    <!-- <section class="h-text">
+        <h1 data-aos="fade-up">Welcome to Apna college web Application Contact Us Section .</h1>
+    </section> -->
+    <section class="h-text">
+
+        <!-- <h1 data-aos="fade-up">Welcome to Apna college web Application .</h1> -->
+        <div class='console-container'><span id='text'></span>
+            <div class='console-underscore' id='console'>&#95;</div>
+        </div>
+    </section>
+    <section id="contect">
+        <div class="contect-row">
+            <div class="contect-left-col">
+                <img src="./img2/b3.png" alt="">
+
+            </div>
+            <div class="contect-right-col">
+                <h1>Contect With Us</h1>
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Name" required>
+                    <input type="Email" name="" id="" placeholder="E-mail" required>
+                    <textarea name="" id="" cols="80" rows="8" required></textarea><br>
+                    <button class="button-btn" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="footer-row container">
+            <div class="footer-left-col">
+                <div class="footer-link">
+                    <div class="footer-demo">
+                        <h2>About us</h2>
+                        <p>Join us</p>
+                        <p>Request Demo</p>
+                    </div>
+                    <div class="footer-demo">
+                        <h2>Features</h2>
+                        <p>Our Plans</p>
+                        <p>Free tutorials</p>
+                    </div>
+                    <div class="footer-demo">
+                        <h2>Courses</h2>
+                        <p>Web Design</p>
+                        <p>Software Engineer</p>
+                    </div>
+                    <div class="footer-demo">
+                        <h2>Support</h2>
+                        <p>Features</p>
+                        <p>Contect Us</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-right-col">
+                <div class="footer-info">
+                    <div class="footer-copyright">
+                        vipinrajput@gmail.com <br>
+                        &copy;2024 Gsce
+                    </div>
+                    <div class="footer-logo">
+                        <img src="./img2/logo.png" alt="">
+                        <center><button class="button-btn">Visit us</button></center>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="xyz">
+        <h2>Devloped By <br> &hearts; Vipin Rajput &hearts;</h2>
+    </section>
+</body>
+
+<script>
+    // function([string1, string2],target id,[color1,color2])    
+    consoleText(['Welcome to Apna college web Application Contact Us Section ..'], 'text', ['crimson', 'royalblue', 'lightblue']);
+
+    function consoleText(words, id, colors) {
+        if (colors === undefined) colors = ['#fff'];
+        var visible = true;
+        var con = document.getElementById('console');
+        var letterCount = 1;
+        var x = 1;
+        var waiting = false;
+        var target = document.getElementById(id)
+        target.setAttribute('style', 'color:' + colors[0])
+        window.setInterval(function () {
+
+            if (letterCount === 0 && waiting === false) {
+                waiting = true;
+                target.innerHTML = words[0].substring(0, letterCount)
+                window.setTimeout(function () {
+                    var usedColor = colors.shift();
+                    colors.push(usedColor);
+                    var usedWord = words.shift();
+                    words.push(usedWord);
+                    x = 1;
+                    target.setAttribute('style', 'color:' + colors[0])
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (letterCount === words[0].length + 1 && waiting === false) {
+                waiting = true;
+                window.setTimeout(function () {
+                    x = -1;
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (waiting === false) {
+                target.innerHTML = words[0].substring(0, letterCount)
+                letterCount += x;
+            }
+        }, 120)
+        window.setInterval(function () {
+            if (visible === true) {
+                con.className = 'console-underscore hidden'
+                visible = false;
+
+            } else {
+                con.className = 'console-underscore'
+
+                visible = true;
+            }
+        }, 400)
+    }
+</script>
+
+
+</html>
